@@ -1,0 +1,17 @@
+<%= @post.errors.full_messages.join(', ') %>
+
+<h1> New Post  </h1>
+
+<%= form_for @post do |po| %>
+  <div>
+    <%= po.label :title %>
+    <%= po.text_field :title %>
+  </div>
+
+  <div>
+    <%= po.label :body %>
+    <%= po.text_area :body %>
+  </div>
+
+  <%= po.submit 'create post' %>
+<% end %>
